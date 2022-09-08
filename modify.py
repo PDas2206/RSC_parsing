@@ -8,8 +8,7 @@ import os
 
 def adding_metadata(file_source, file_modified, path_modified, path_source):
     '''This will add the metadata'''
-    #path = "C:/Users/PRIYANKA/Desktop/Language Science and Technology/Uni B1/Modifying Parsed files/source/"
-    
+        
     with open(path_source+file_source, 'r', encoding="utf-8") as f_source:
         with open(path_modified+file_modified,'w', encoding="utf-8") as f_modified:
             metadata = f_source.readline()
@@ -18,7 +17,6 @@ def adding_metadata(file_source, file_modified, path_modified, path_source):
 
 def modify(file_target, file_modified, path_modified, path_target):
     '''This will modify the target files'''
-    #path = "C:/Users/PRIYANKA/Desktop/Language Science and Technology/Uni B1/Modifying Parsed files/target/"
     line_list=[]
     with open(path_target+file_target, 'r', encoding="utf-8") as f_target:
         with open(path_modified+file_modified,'a', encoding="utf-8") as f_modified:
@@ -41,7 +39,7 @@ def modify(file_target, file_modified, path_modified, path_target):
 def retrieving_target_files(path_target):
     '''This returns a list of all the files in the TARGET folder'''
     # The path for the folder containing the target files (conllu)
-    #path = "C:/Users/PRIYANKA/Desktop/Language Science and Technology/Uni B1/Modifying Parsed files/target/"
+    
     list_of_target_files = os.listdir(path_target)
     
        
@@ -53,7 +51,7 @@ def retrieving_target_files(path_target):
 def retrieving_source_files(path_source): 
     '''This returns a list of all the files in the SOURCE folder'''
     # The path for the folder containing the source files (vrt)
-    #path = "C:/Users/PRIYANKA/Desktop/Language Science and Technology/Uni B1/Modifying Parsed files/source/"
+    
     list_of_source_files = os.listdir(path_source)
     
     # To retrieve only the name of the files without the extension
@@ -101,15 +99,12 @@ def selecting_target_files(list_of_target_files, list_of_source_files, path_modi
 
 '''path to store the new modified target files'''
 path_modified="/home/pdas/modify_parsed/modified/"
-#path_modified="C:/Users/PRIYANKA/Desktop/Language Science and Technology/Uni B1/Modifying Parsed files/modified/"
 
 '''path to retrieve the source files'''
 path_source="/home/pdas/modify_parsed/src/"
-#path_source = "C:/Users/PRIYANKA/Desktop/Language Science and Technology/Uni B1/Modifying Parsed files/source/"
 
 '''path to retrieve the target files'''
 path_target="/home/pdas/modify_parsed/all_conllu/"
-#path_target = "C:/Users/PRIYANKA/Desktop/Language Science and Technology/Uni B1/Modifying Parsed files/target/"
 
 
 list_of_target_files=retrieving_target_files(path_target)
