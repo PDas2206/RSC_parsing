@@ -7,6 +7,7 @@ Created on Tue May 24 02:31:14 2022
 
 
 def remove_blank_lines(file_name):
+    ''' removes blank lines from the resultant file with contents of all meta data added parsed files'''
     line_list=[]
     with open(file_name, 'r',encoding="utf-8") as f:
         with open("SENT_calculated_all_no_space.vrt", 'w', encoding="utf-8") as f_nospace:
@@ -23,13 +24,9 @@ def remove_blank_lines(file_name):
                             print(listToString(line_list,'\t')[:-1], file=f_nospace)
                         '''
                         print(line, file=f_nospace)
-                #if line_list[0]!="#" or line!='':
-                 #   print(line,  file=f_nospace)             
-                    #print("".join(line if not line.isspace()), file=f_nospace)
+               
         
 remove_blank_lines("SENT_calculated_all.vrt")
-#remove_blank_lines("sample.txt")                    
-
 
                     
 
