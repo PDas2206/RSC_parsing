@@ -6,7 +6,6 @@ Created on Mon May 30 13:43:40 2022
 """
 path_calculated="/home/pdas/modify_parsed/calculated/"
 with open (path_calculated+"calculated_all.vrt","r", encoding="utf-8") as f_in:
-#with open ("sample_no_space.txt","r", encoding="utf-8") as f_in:
     with open ("SENT_calculated_all.vrt","w", encoding="utf-8") as f_out:
         for line in f_in:
             line=line.strip("\n")
